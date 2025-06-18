@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>علاجي - تطبيق الرعاية الصحية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #347175 0%, #7aa1a2 100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .download-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-[#dee6e6] text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-[#347175] rounded-full flex items-center justify-center text-white font-bold text-xl">ع</div>
+                <h1 class="mr-3 text-2xl font-bold text-[#347175]">علاجي</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6 space-x-reverse">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">الرئيسية</a>
+                <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium">المميزات</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium">الخدمات</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium">آراء العملاء</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">اتصل بنا</a>
+            </nav>
+            
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <a href="#" class="bg-[#347175] text-white px-4 py-2 rounded-lg hover:bg-[#7aa1a2] transition">تسجيل الدخول</a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium py-2">الرئيسية</a>
+                <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium py-2">المميزات</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium py-2">الخدمات</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium py-2">آراء العملاء</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium py-2">اتصل بنا</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">تطبيق علاجي - رعاية صحية في متناول يدك</h1>
+                <p class="text-xl mb-8">احصل على استشارات طبية فورية، حجز مواعيد، متابعة وصفات طبية، والمزيد من الخدمات الصحية من خلال تطبيق علاجي</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
+                    <a href="#" class="download-btn bg-white text-[#347175] px-6 py-3 rounded-lg font-bold flex items-center justify-center">
+                        <i class="fab fa-google-play ml-2"></i>
+                        جوجل بلاي
+                    </a>
+                    <a href="#" class="download-btn bg-black text-white px-6 py-3 rounded-lg font-bold flex items-center justify-center">
+                        <i class="fab fa-apple ml-2"></i>
+                        آب ستور
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://via.placeholder.com/400x800/4f46e5/ffffff?text=Ilaji+App" alt="علاجي تطبيق" class="w-64 md:w-80 rounded-xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-[#347175] mb-2">50K+</div>
+                    <div class="text-gray-600">مستخدم نشط</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-[#7aa1a2] mb-2">200+</div>
+                    <div class="text-gray-600">طبيب متخصص</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">24/7</div>
+                    <div class="text-gray-600">استشارات طبية</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-yellow-500 mb-2">95%</div>
+                    <div class="text-gray-600">رضا العملاء</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">مميزات تطبيق علاجي</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">تطبيق علاجي يوفر لك جميع الخدمات الصحية التي تحتاجها في مكان واحد</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-[#dee6e6] rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-md text-[#347175] text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">استشارات طبية فورية</h3>
+                    <p class="text-gray-600">احصل على استشارات طبية من أطباء متخصصين في أي وقت ومن أي مكان عبر الدردشة أو المكالمات</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-check text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">حجز مواعيد بسهولة</h3>
+                    <p class="text-gray-600">احجز موعدك مع أفضل الأطباء والمستشفيات بضغطة زر دون عناء الانتظار على الهاتف</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-prescription-bottle-alt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">إدارة الأدوية</h3>
+                    <p class="text-gray-600">نظام تذكير بمواعيد الأدوية ومتابعة للوصفات الطبية لضمان الالتزام بالعلاج</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-heartbeat text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">متابعة صحية</h3>
+                    <p class="text-gray-600">سجل ومتابعة جميع الفحوصات والتحاليل الطبية في مكان واحد مع إمكانية مشاركتها مع طبيبك</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-ambulance text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">خدمات الطوارئ</h3>
+                    <p class="text-gray-600">طلب إسعاف أو مساعدة طبية عاجلة مع تحديد موقعك تلقائياً لإرسال المساعدة بسرعة</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-file-medical text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">سجل طبي إلكتروني</h3>
+                    <p class="text-gray-600">حفظ كامل السجل الطبي الخاص بك بشكل آمن وسري مع إمكانية الوصول إليه في أي وقت</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">خدمات علاجي</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">نقدم مجموعة متكاملة من الخدمات الصحية لتلبية جميع احتياجاتك</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="flex flex-col md:flex-row bg-gray-50 rounded-xl overflow-hidden">
+                    <div class="md:w-1/3 bg-blue-600 flex items-center justify-center p-6">
+                        <i class="fas fa-stethoscope text-white text-5xl"></i>
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <h3 class="text-xl font-bold mb-3">الاستشارات الطبية</h3>
+                        <p class="text-gray-600 mb-4">استشارات مع أطباء متخصصين في جميع التخصصات الطبية عبر الدردشة أو المكالمة الصوتية أو المرئية</p>
+                        <a href="#" class="text-blue-600 font-medium">تعرف أكثر <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="flex flex-col md:flex-row bg-gray-50 rounded-xl overflow-hidden">
+                    <div class="md:w-1/3 bg-green-600 flex items-center justify-center p-6">
+                        <i class="fas fa-procedures text-white text-5xl"></i>
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <h3 class="text-xl font-bold mb-3">حجز المستشفيات</h3>
+                        <p class="text-gray-600 mb-4">حجز أسرة في أفضل المستشفيات والعيادات مع إمكانية اختيار الغرف والخدمات الإضافية</p>
+                        <a href="#" class="text-green-600 font-medium">تعرف أكثر <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="flex flex-col md:flex-row bg-gray-50 rounded-xl overflow-hidden">
+                    <div class="md:w-1/3 bg-purple-600 flex items-center justify-center p-6">
+                        <i class="fas fa-pills text-white text-5xl"></i>
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <h3 class="text-xl font-bold mb-3">صيدلية إلكترونية</h3>
+                        <p class="text-gray-600 mb-4">طلب الأدوية من الصيدليات المعتمدة مع توصيل سريع إلى منزلك وتتبع الطلب</p>
+                        <a href="#" class="text-purple-600 font-medium">تعرف أكثر <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="flex flex-col md:flex-row bg-gray-50 rounded-xl overflow-hidden">
+                    <div class="md:w-1/3 bg-yellow-500 flex items-center justify-center p-6">
+                        <i class="fas fa-heart text-white text-5xl"></i>
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <h3 class="text-xl font-bold mb-3">برامج الرعاية</h3>
+                        <p class="text-gray-600 mb-4">برامج متابعة ورعاية للمرضى المزمنين مع خطط علاجية مخصصة ومتابعة دورية</p>
+                        <a href="#" class="text-yellow-600 font-medium">تعرف أكثر <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">آراء عملائنا</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">ما يقوله مستخدمونا عن تجربتهم مع تطبيق علاجي</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">أ</div>
+                        <div class="mr-3">
+                            <h4 class="font-bold">أحمد محمد</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"تطبيق رائع ساعدني في الحصول على استشارة طبية فورية في منتصف الليل عندما كنت أعاني من ألم شديد. الطبيب كان محترفاً جداً وساعدني في تخطي الأزمة."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">س</div>
+                        <div class="mr-3">
+                            <h4 class="font-bold">سارة عبدالله</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"أعاني من مرض السكري وتطبيق علاجي ساعدني في متابعة حالتي بدقة. نظام التذكير بالأدوية والمواعيد أنقذني من نسيان جرعاتي عدة مرات."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold">خ</div>
+                        <div class="mr-3">
+                            <h4 class="font-bold">خالد علي</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"حجزت موعداً لوالدي في مستشفى متخصص خلال دقائق بدلاً من الانتظار على الهاتف لساعات. الخدمة سريعة والدفع إلكترونياً مما وفر علي الوقت والجهد."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA Section -->
+    <section class="py-16 bg-[#347175] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">حمل تطبيق علاجي الآن</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">احصل على جميع الخدمات الصحية في جيبك. متوفر الآن على متجر جوجل بلاي وآب ستور</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
+                <a href="#" class="download-btn bg-white text-blue-600 px-6 py-3 rounded-lg font-bold flex items-center justify-center">
+                    <i class="fab fa-google-play ml-2"></i>
+                    جوجل بلاي
+                </a>
+                <a href="#" class="download-btn bg-black text-white px-6 py-3 rounded-lg font-bold flex items-center justify-center">
+                    <i class="fab fa-apple ml-2"></i>
+                    آب ستور
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">اتصل بنا</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">لديك استفسار أو اقتراح؟ نحن هنا لمساعدتك</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">الاسم</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">الموضوع</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">الرسالة</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#347175] text-white py-3 rounded-lg font-bold hover:bg-[#7aa1a2] transition">إرسال الرسالة</button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">العنوان</h4>
+                            <p class="text-gray-600">الرياض، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-4">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">الهاتف</h4>
+                            <p class="text-gray-600">+966 12 345 6789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mr-4">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">البريد الإلكتروني</h4>
+                            <p class="text-gray-600">info@ilaji.app</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mr-4">
+                            <i class="fas fa-clock text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">ساعات العمل</h4>
+                            <p class="text-gray-600">الأحد - الخميس: 8 صباحاً - 5 مساءً</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">الأسئلة الشائعة</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">إجابات على أكثر الأسئلة التي تردنا من مستخدمينا</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle w-full flex justify-between items-center text-right">
+                        <h3 class="text-lg font-bold">كيف يمكنني حجز موعد مع طبيب؟</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="faq-content mt-3 hidden">
+                        <p class="text-gray-600">يمكنك حجز موعد مع طبيب بسهولة عن طريق اختيار التخصص المطلوب، ثم اختيار الطبيب المناسب، وتحديد التاريخ والوقت المناسبين لك، وإتمام عملية الحجز والدفع إلكترونياً.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle w-full flex justify-between items-center text-right">
+                        <h3 class="text-lg font-bold">هل الاستشارات الطبية عبر التطبيق آمنة وسرية؟</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="faq-content mt-3 hidden">
+                        <p class="text-gray-600">نعم، جميع الاستشارات الطبية عبر تطبيق علاجي تتم بشكل آمن وسري تماماً. نستخدم أحدث تقنيات التشفير لحماية بياناتك وخصوصيتك، ولا يتم مشاركة أي معلومات طبية مع أي طرف ثالث دون موافقتك.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle w-full flex justify-between items-center text-right">
+                        <h3 class="text-lg font-bold">ما هي طرق الدفع المتاحة؟</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="faq-content mt-3 hidden">
+                        <p class="text-gray-600">نوفر عدة طرق دفع آمنة وسهلة تشمل: بطاقات الائتمان والمدينة (فيزا، ماستركارد، أمريكان إكسبريس)، الدفع عبر آبل باي وجوجل باي، بالإضافة إلى المحافظ الإلكترونية مثل STC Pay.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle w-full flex justify-between items-center text-right">
+                        <h3 class="text-lg font-bold">كيف يمكنني إضافة أفراد عائلتي إلى حسابي؟</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="faq-content mt-3 hidden">
+                        <p class="text-gray-600">يمكنك إضافة أفراد عائلتك من خلال الذهاب إلى إعدادات الحساب، ثم اختيار "إدارة العائلة"، وإضافة بياناتهم الأساسية. بعد ذلك يمكنك حجز المواعيد وإدارة الأدوية والوصفات الطبية لهم من حسابك الرئيسي.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle w-full flex justify-between items-center text-right">
+                        <h3 class="text-lg font-bold">هل يمكنني الحصول على وصفة طبية عبر التطبيق؟</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="faq-content mt-3 hidden">
+                        <p class="text-gray-600">نعم، بعد إجراء الاستشارة الطبية مع أحد أطبائنا المعتمدين، يمكن للطبيب إصدار وصفة طبية إلكترونية معتمدة يتم تخزينها في سجلك الطبي، ويمكنك مشاركتها مع أي صيدلية لصرف الدواء.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-[#347175] rounded-full flex items-center justify-center text-white font-bold text-lg">ع</div>
+                        <h3 class="mr-2 text-xl font-bold">علاجي</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">تطبيق علاجي هو منصة متكاملة للرعاية الصحية تهدف إلى جعل الخدمات الطبية في متناول الجميع بسهولة وسرعة.</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#347175] transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">الرئيسية</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">المميزات</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">الخدمات</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">آراء العملاء</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">الخدمات</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">الاستشارات الطبية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">حجز المواعيد</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">إدارة الأدوية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">السجل الطبي</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">خدمات الطوارئ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">النشرة البريدية</h4>
+                    <p class="text-gray-400 mb-4">اشترك في نشرتنا البريدية لتصلك آخر التحديثات والعروض.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="بريدك الإلكتروني" class="px-4 py-2 bg-gray-800 text-white rounded-r-lg focus:outline-none w-full">
+                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-l-lg hover:bg-blue-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 علاجي. جميع الحقوق محفوظة.</p>
+                <div class="flex space-x-6 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition">شروط الخدمة</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ Toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const faqContent = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                faqContent.classList.toggle('hidden');
+                
+                if (faqContent.classList.contains('hidden')) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
